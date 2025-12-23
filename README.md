@@ -157,14 +157,4 @@ See `requirements.txt` for exact versions.
 - Cloud monitoring dashboard
 - Predictive weather integration
 
-## 📝 License
-
-MIT License
-
-## 👤 Author
-
-Harshita - AI Battery Systems Research
-
----
-
 **Last Updated**: December 2025
