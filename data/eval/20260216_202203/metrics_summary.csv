@@ -1,0 +1,17 @@
+scenario,controller_mode,n,peak_temp_c_mean,peak_temp_c_std,peak_temp_c_ci95,soh_degradation_rate_per_hour_mean,soh_degradation_rate_per_hour_std,soh_degradation_rate_per_hour_ci95,protection_events_mean,protection_events_std,protection_events_ci95,energy_cost_index_mean,energy_cost_index_std,energy_cost_index_ci95,load_curtailment_count_mean,load_curtailment_count_std,load_curtailment_count_ci95,live_to_sim_fallback_events_mean,live_to_sim_fallback_events_std,live_to_sim_fallback_events_ci95
+heatwave_high_temp,fuzzy_only,5,60.4,0.0,0.0,1.8684,0.012075,0.010584,0.0,0.0,0.0,56.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+heatwave_high_temp,rnn_fuzzy,5,60.4,0.0,0.0,0.216,0.0,0.0,0.0,0.0,0.0,56.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+heatwave_high_temp,rnn_fuzzy_ga,5,60.4,0.0,0.0,0.2124,0.00493,0.004321,0.0,0.0,0.0,56.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+heatwave_high_temp,rule_only,5,60.4,0.0,0.0,1.8666,0.00493,0.004321,0.0,0.0,0.0,56.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+missing_stale_telemetry,fuzzy_only,5,44.0,0.0,0.0,0.288,0.0,0.0,0.0,0.0,0.0,104.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0
+missing_stale_telemetry,rnn_fuzzy,5,44.0,0.0,0.0,-2.1816,0.029577,0.025925,0.0,0.0,0.0,104.0,0.0,0.0,0.0,0.0,0.0,8.4,0.547723,0.4801
+missing_stale_telemetry,rnn_fuzzy_ga,5,44.0,0.0,0.0,-2.2644,0.048299,0.042336,0.0,0.0,0.0,104.0,0.0,0.0,0.0,0.0,0.0,8.8,0.447214,0.392
+missing_stale_telemetry,rule_only,5,44.0,0.0,0.0,0.288,0.0,0.0,0.0,0.0,0.0,104.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0
+normal_load,fuzzy_only,5,42.6,0.0,0.0,1.071,0.0,0.0,0.0,0.0,0.0,208.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+normal_load,rnn_fuzzy,5,42.6,0.0,0.0,-0.2556,0.400556,0.351102,0.0,0.0,0.0,208.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+normal_load,rnn_fuzzy_ga,5,42.6,0.0,0.0,-0.0468,0.02241,0.019643,0.0,0.0,0.0,208.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+normal_load,rule_only,5,42.6,0.0,0.0,1.0746,0.00805,0.007056,0.0,0.0,0.0,208.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+sudden_spike,fuzzy_only,5,54.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,224.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+sudden_spike,rnn_fuzzy,5,54.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,224.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+sudden_spike,rnn_fuzzy_ga,5,54.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,224.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+sudden_spike,rule_only,5,54.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,224.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

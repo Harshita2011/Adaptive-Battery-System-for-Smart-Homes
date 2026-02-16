@@ -1,0 +1,13 @@
+{
+    "run_id":  "20260216_202203",
+    "git_commit":  "07cc279",
+    "generated_utc":  "2026-02-16T15:11:42.4133554Z",
+    "repeats":  5,
+    "controller_modes":  "rule_only,fuzzy_only,rnn_fuzzy,rnn_fuzzy_ga",
+    "normal_steps":  40,
+    "heatwave_steps":  40,
+    "spike_low_steps":  20,
+    "spike_high_steps":  12,
+    "spike_recover_steps":  20,
+    "stale_steps":  20
+}

@@ -1,0 +1,95 @@
+# Scenario Evaluation Report
+
+## KPI Summary (Mean ± CI95)
+
+```text
+               scenario controller_mode  n  peak_temp_c_mean  peak_temp_c_std  peak_temp_c_ci95  soh_degradation_rate_per_hour_mean  soh_degradation_rate_per_hour_std  soh_degradation_rate_per_hour_ci95  protection_events_mean  protection_events_std  protection_events_ci95  energy_cost_index_mean  energy_cost_index_std  energy_cost_index_ci95  load_curtailment_count_mean  load_curtailment_count_std  load_curtailment_count_ci95  live_to_sim_fallback_events_mean  live_to_sim_fallback_events_std  live_to_sim_fallback_events_ci95
+     heatwave_high_temp      fuzzy_only  5              60.4              0.0               0.0                              1.8684                           0.012075                            0.010584                     0.0                    0.0                     0.0                    56.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+     heatwave_high_temp       rnn_fuzzy  5              60.4              0.0               0.0                              0.2160                           0.000000                            0.000000                     0.0                    0.0                     0.0                    56.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+     heatwave_high_temp    rnn_fuzzy_ga  5              60.4              0.0               0.0                              0.2124                           0.004930                            0.004321                     0.0                    0.0                     0.0                    56.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+     heatwave_high_temp       rule_only  5              60.4              0.0               0.0                              1.8666                           0.004930                            0.004321                     0.0                    0.0                     0.0                    56.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+missing_stale_telemetry      fuzzy_only  5              44.0              0.0               0.0                              0.2880                           0.000000                            0.000000                     0.0                    0.0                     0.0                   104.0                    0.0                     0.0                          0.0                         0.0                          0.0                               5.0                         0.000000                            0.0000
+missing_stale_telemetry       rnn_fuzzy  5              44.0              0.0               0.0                             -2.1816                           0.029577                            0.025925                     0.0                    0.0                     0.0                   104.0                    0.0                     0.0                          0.0                         0.0                          0.0                               8.4                         0.547723                            0.4801
+missing_stale_telemetry    rnn_fuzzy_ga  5              44.0              0.0               0.0                             -2.2644                           0.048299                            0.042336                     0.0                    0.0                     0.0                   104.0                    0.0                     0.0                          0.0                         0.0                          0.0                               8.8                         0.447214                            0.3920
+missing_stale_telemetry       rule_only  5              44.0              0.0               0.0                              0.2880                           0.000000                            0.000000                     0.0                    0.0                     0.0                   104.0                    0.0                     0.0                          0.0                         0.0                          0.0                               5.0                         0.000000                            0.0000
+            normal_load      fuzzy_only  5              42.6              0.0               0.0                              1.0710                           0.000000                            0.000000                     0.0                    0.0                     0.0                   208.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+            normal_load       rnn_fuzzy  5              42.6              0.0               0.0                             -0.2556                           0.400556                            0.351102                     0.0                    0.0                     0.0                   208.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+            normal_load    rnn_fuzzy_ga  5              42.6              0.0               0.0                             -0.0468                           0.022410                            0.019643                     0.0                    0.0                     0.0                   208.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+            normal_load       rule_only  5              42.6              0.0               0.0                              1.0746                           0.008050                            0.007056                     0.0                    0.0                     0.0                   208.0                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+           sudden_spike      fuzzy_only  5              54.0              0.0               0.0                              0.0000                           0.000000                            0.000000                     1.0                    0.0                     0.0                   224.8                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+           sudden_spike       rnn_fuzzy  5              54.0              0.0               0.0                              0.0000                           0.000000                            0.000000                     1.0                    0.0                     0.0                   224.8                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+           sudden_spike    rnn_fuzzy_ga  5              54.0              0.0               0.0                              0.0000                           0.000000                            0.000000                     1.0                    0.0                     0.0                   224.8                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+           sudden_spike       rule_only  5              54.0              0.0               0.0                              0.0000                           0.000000                            0.000000                     1.0                    0.0                     0.0                   224.8                    0.0                     0.0                          0.0                         0.0                          0.0                               0.0                         0.000000                            0.0000
+```
+
+## Pairwise Significance vs Baseline (rule_only)
+
+```text
+               scenario baseline_mode compare_mode                        metric  mean_baseline  mean_compare  delta_compare_minus_baseline  p_value_approx
+     heatwave_high_temp     rule_only   fuzzy_only             energy_cost_index        56.0000       56.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only    rnn_fuzzy             energy_cost_index        56.0000       56.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only rnn_fuzzy_ga             energy_cost_index        56.0000       56.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only   fuzzy_only        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only    rnn_fuzzy        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only rnn_fuzzy_ga        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only   fuzzy_only                   peak_temp_c        60.4000       60.4000                        0.0000        1.000000
+     heatwave_high_temp     rule_only    rnn_fuzzy                   peak_temp_c        60.4000       60.4000                        0.0000        1.000000
+     heatwave_high_temp     rule_only rnn_fuzzy_ga                   peak_temp_c        60.4000       60.4000                        0.0000        1.000000
+     heatwave_high_temp     rule_only   fuzzy_only             protection_events         0.0000        0.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only    rnn_fuzzy             protection_events         0.0000        0.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only rnn_fuzzy_ga             protection_events         0.0000        0.0000                        0.0000        1.000000
+     heatwave_high_temp     rule_only   fuzzy_only soh_degradation_rate_per_hour         1.8666        1.8684                        0.0018        0.757621
+     heatwave_high_temp     rule_only    rnn_fuzzy soh_degradation_rate_per_hour         1.8666        0.2160                       -1.6506        0.000000
+     heatwave_high_temp     rule_only rnn_fuzzy_ga soh_degradation_rate_per_hour         1.8666        0.2124                       -1.6542        0.000000
+missing_stale_telemetry     rule_only   fuzzy_only             energy_cost_index       104.0000      104.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only    rnn_fuzzy             energy_cost_index       104.0000      104.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only rnn_fuzzy_ga             energy_cost_index       104.0000      104.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only   fuzzy_only        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only    rnn_fuzzy        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only rnn_fuzzy_ga        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only   fuzzy_only                   peak_temp_c        44.0000       44.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only    rnn_fuzzy                   peak_temp_c        44.0000       44.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only rnn_fuzzy_ga                   peak_temp_c        44.0000       44.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only   fuzzy_only             protection_events         0.0000        0.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only    rnn_fuzzy             protection_events         0.0000        0.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only rnn_fuzzy_ga             protection_events         0.0000        0.0000                        0.0000        1.000000
+missing_stale_telemetry     rule_only   fuzzy_only soh_degradation_rate_per_hour         0.2880        0.2880                        0.0000        1.000000
+missing_stale_telemetry     rule_only    rnn_fuzzy soh_degradation_rate_per_hour         0.2880       -2.1816                       -2.4696        0.000000
+missing_stale_telemetry     rule_only rnn_fuzzy_ga soh_degradation_rate_per_hour         0.2880       -2.2644                       -2.5524        0.000000
+            normal_load     rule_only   fuzzy_only             energy_cost_index       208.0000      208.0000                        0.0000        1.000000
+            normal_load     rule_only    rnn_fuzzy             energy_cost_index       208.0000      208.0000                        0.0000        1.000000
+            normal_load     rule_only rnn_fuzzy_ga             energy_cost_index       208.0000      208.0000                        0.0000        1.000000
+            normal_load     rule_only   fuzzy_only        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+            normal_load     rule_only    rnn_fuzzy        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+            normal_load     rule_only rnn_fuzzy_ga        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+            normal_load     rule_only   fuzzy_only                   peak_temp_c        42.6000       42.6000                        0.0000        1.000000
+            normal_load     rule_only    rnn_fuzzy                   peak_temp_c        42.6000       42.6000                        0.0000        1.000000
+            normal_load     rule_only rnn_fuzzy_ga                   peak_temp_c        42.6000       42.6000                        0.0000        1.000000
+            normal_load     rule_only   fuzzy_only             protection_events         0.0000        0.0000                        0.0000        1.000000
+            normal_load     rule_only    rnn_fuzzy             protection_events         0.0000        0.0000                        0.0000        1.000000
+            normal_load     rule_only rnn_fuzzy_ga             protection_events         0.0000        0.0000                        0.0000        1.000000
+            normal_load     rule_only   fuzzy_only soh_degradation_rate_per_hour         1.0746        1.0710                       -0.0036        0.317311
+            normal_load     rule_only    rnn_fuzzy soh_degradation_rate_per_hour         1.0746       -0.2556                       -1.3302        0.000000
+            normal_load     rule_only rnn_fuzzy_ga soh_degradation_rate_per_hour         1.0746       -0.0468                       -1.1214        0.000000
+           sudden_spike     rule_only   fuzzy_only             energy_cost_index       224.8000      224.8000                        0.0000        1.000000
+           sudden_spike     rule_only    rnn_fuzzy             energy_cost_index       224.8000      224.8000                        0.0000        1.000000
+           sudden_spike     rule_only rnn_fuzzy_ga             energy_cost_index       224.8000      224.8000                        0.0000        1.000000
+           sudden_spike     rule_only   fuzzy_only        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+           sudden_spike     rule_only    rnn_fuzzy        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+           sudden_spike     rule_only rnn_fuzzy_ga        load_curtailment_count         0.0000        0.0000                        0.0000        1.000000
+           sudden_spike     rule_only   fuzzy_only                   peak_temp_c        54.0000       54.0000                        0.0000        1.000000
+           sudden_spike     rule_only    rnn_fuzzy                   peak_temp_c        54.0000       54.0000                        0.0000        1.000000
+           sudden_spike     rule_only rnn_fuzzy_ga                   peak_temp_c        54.0000       54.0000                        0.0000        1.000000
+           sudden_spike     rule_only   fuzzy_only             protection_events         1.0000        1.0000                        0.0000        1.000000
+           sudden_spike     rule_only    rnn_fuzzy             protection_events         1.0000        1.0000                        0.0000        1.000000
+           sudden_spike     rule_only rnn_fuzzy_ga             protection_events         1.0000        1.0000                        0.0000        1.000000
+           sudden_spike     rule_only   fuzzy_only soh_degradation_rate_per_hour         0.0000        0.0000                        0.0000        1.000000
+           sudden_spike     rule_only    rnn_fuzzy soh_degradation_rate_per_hour         0.0000        0.0000                        0.0000        1.000000
+           sudden_spike     rule_only rnn_fuzzy_ga soh_degradation_rate_per_hour         0.0000        0.0000                        0.0000        1.000000
+```
+
+## Notes
+
+- CI95 computed as `1.96 * std / sqrt(n)` across repeats.
+- p-values are Welch-style normal approximations (no scipy dependency).
+- Re-run with higher repeats for stronger statistical power.

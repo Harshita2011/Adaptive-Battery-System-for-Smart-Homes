@@ -1,0 +1,5 @@
+scenario,samples,peak_temp_c,soh_start,soh_end,soh_degradation_rate_per_hour,protection_events,energy_cost_index,load_curtailment_count,live_to_sim_fallback_events,peak_temp_reduction_vs_normal_pct
+heatwave_high_temp,40,60.4,0.9981,0.9957,0.216,0,56.0,0,0,-41.784
+missing_stale_telemetry,20,44.0,0.985,0.997,-2.16,0,104.0,0,8,-3.2864
+normal_load,40,42.6,0.9974,0.9982,-0.072,0,208.0,0,0,0.0
+sudden_spike,52,54.0,0.985,0.985,0.0,1,224.8,0,0,-26.7606
